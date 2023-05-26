@@ -1,0 +1,17 @@
+<div class="card user-form">
+  <div class="msg-space">
+    <div *ngIf="showSuccess" class="success">
+      <p class="bg-success text-center fg-white">Created user successfully</p>
+    </div>
+  </div>
+  <form (ngSubmit)="createUser()">
+    <div class="mb-3">
+      <label for="username" class="form-label">Name</label>
+      <input type="text" name="username" [(ngModel)]="username" class="form-control form-control-sm" id="username" placeholder="James">
+    </div>
+    <div class="btn-space">
+      <!-- <button type="button" class="btn btn-sm btn-secondary mx-3" (click)="dismiss()">Cancel</button> -->
+      <button type="submit" class="btn btn-sm btn-primary mx-3">Add User</button>
+    </div>
+  </form>
+</div>

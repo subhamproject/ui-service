@@ -1,0 +1,47 @@
+<div class="container-fluid">
+  <nav class="navbar bg-light mt-2">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/user.png" alt="Bootstrap" width="50" height="50" />
+        User Control Framework
+      </a>
+      <div class="right-group">
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-3">
+        <img width="100%" src="/assets/ilt.jpeg" alt="AWS Control Framework Web Interface">
+        <hr />
+        <h1 class="display-4">User Control Framework</h1>
+      </div>
+      <div class="col-9 mt-5">
+        <nav>
+          <ul class="nav justify-content-center">
+            <!-- <li class="nav-item" *ngFor="let nlink of navlinks">
+              <a class="nav-link active" aria-current="page" [routerLink]="nlink.route">{{nlink.label}}</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" routerLink="create-user">Create user</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="users">Users</a>
+            </li>
+          </ul>
+        </nav>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- <nav>
+  <ul>
+    <li><a routerLink="child-a">Child A</a></li>
+    <li><a routerLink="child-b">Child B</a></li>
+  </ul>
+</nav>
+
+<router-outlet></router-outlet> -->
