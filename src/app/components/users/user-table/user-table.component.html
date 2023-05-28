@@ -1,0 +1,30 @@
+<div class="container">
+
+  <div *ngIf="source.length === 0;else users">
+    <div class="user-table user-form">
+      No users, please add a user !!!
+      <a class="link" aria-current="page" routerLink="../create-user">Create
+        user</a>
+      <br>
+    </div>
+  </div>
+  <ng-template #users>
+    <h4>PLEASE FIND EXISITING USER DETAILS</h4>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">USER ID</th>
+          <th scope="col">NAME</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of source; index as i">
+          <th scope="row">{{ user && user.id }}</th>
+          <td>
+            {{ user && user.name }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-template>
+</div>
