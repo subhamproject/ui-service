@@ -7,7 +7,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class UserService {
 
-  private _root = 'http://localhost:8071/api';
+  private _root = '/api';
 
   private _users: any = [];
   private _users$ = new BehaviorSubject(this._users);

@@ -21,4 +21,8 @@ app.all('*', (req, res) => {
 
 const port = process.env.PORT || 8071;
 
-app.listen(port);
+const listener = app.listen(port);
+
+listener.on('listening', () => {
+  console.log('Server listening on port -', port);
+})
